@@ -1,0 +1,65 @@
+.MovieCards{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 2rem;
+
+}
+.MovieCard{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #fff;
+    position: relative;
+    transition: 2s all ease-in;
+}
+.MovieCard a img{
+   width: 100%;
+    height: 100%;
+    
+}
+.MovieCard .moviedetails{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 45, 45, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 0.4rem;
+    opacity: 0;
+    visibility: hidden;
+
+    
+}
+.moviedetails .movieinfo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.movieinfo h5{
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+.movieinfo .points{
+    display: flex;
+    align-items: center;
+}
+.movieinfo .points img{
+    width: 1rem;
+ 
+
+}
+.MovieCard:hover{
+    transform: scale(1.2);
+}
+.MovieCard:hover .moviedetails{
+    opacity: 1;
+    visibility: visible;
+}
